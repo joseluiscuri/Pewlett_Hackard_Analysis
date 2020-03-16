@@ -1,0 +1,64 @@
+Departments
+-
+dept_no varchar pk
+dept_name varchar
+
+Employees
+-
+emp_no int pk FK - Salaries.emp_no
+birt_date date
+first_name varhcar
+last_name varchar
+gender varchar
+hire_date date
+
+Managers
+-
+dept_no varchar pk FK - Departments.dept_no
+emp_no int FK - Employees.emp_no
+from_date date
+to_date date
+
+Dept_emp
+-
+dept_no varchar pk FK >- Departments.dept_no
+emp_no int FK >- Employees.emp_no
+from_date date
+to_date date
+
+Titles
+-
+emp_no int pk FK >- Employees.emp_no
+title varchar
+from_date date
+to_date date
+
+Salaries
+-
+emp_no int pk
+salary int
+from_date date
+to_date date
+
+Titles_Retiring
+-
+emp_no int pk FK >- Employees.emp_no
+first_name varchar FK >- Employees.first_name
+last_name varchar FK >- Employees.last_name
+title varchar FK >- Titles.title
+from_date int FK >- Titles.from_date
+salary int FK >- Salaries.salary
+
+Recent_titles
+-
+title varchar pk FK >- Titles.title
+from_date int FK >- Titles.from_date
+
+Mentor_ready
+-
+emp_no int pk FK - Employees.emp_no
+first_name varchar FK - Employees.first_name
+last_name varchar FK - Employees.last_name
+title varchar FK - Titles.title
+from_date date FK - Titles.from_date
+to_date date FK - Titles.to_date
