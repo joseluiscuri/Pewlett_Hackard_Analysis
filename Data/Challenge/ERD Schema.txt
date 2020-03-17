@@ -49,10 +49,9 @@ title varchar FK >- Titles.title
 from_date int FK >- Titles.from_date
 salary int FK >- Salaries.salary
 
-Recent_titles
+Titles_for_retirement
 -
-title varchar pk FK >- Titles.title
-from_date int FK >- Titles.from_date
+title varchar pk FK >- Titles_Retiring.title
 
 Mentor_ready
 -
@@ -62,3 +61,4 @@ last_name varchar FK - Employees.last_name
 title varchar FK - Titles.title
 from_date date FK - Titles.from_date
 to_date date FK - Titles.to_date
+
